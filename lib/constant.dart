@@ -29,7 +29,7 @@ const kTitleTextstyle = TextStyle(
 //Url
 const coronaBaseURL = "https://coronavirus-tracker-api.herokuapp.com/v2/";
 const coronaLocationsURL = "locations";
-const countriesCODE= {
+ const Map<String,String > countriesCODE= {
 "Ascension Island":'ac',
 "Andorra":'ad',
 "United Arab Emirates":'ae',

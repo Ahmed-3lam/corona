@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'Screens/details_screen.dart';
+import 'Screens/map_screen.dart';
 import 'constant.dart';
 
 void main() async{
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
         providers: [
-        BlocProvider(create: (context) => DetailsCubit()..getCoronaData()),
+        BlocProvider(create: (context) => DetailsCubit()..getCoronaData()..getLocation()),
     ],
     child:
 
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
           textTheme: TextTheme(
             bodyText1: TextStyle(color: kBodyTextColor),
           )),
-      home: DetailsScreen(),
+      home: MapScreen(),
     )
     );
   }

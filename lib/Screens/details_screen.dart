@@ -4,17 +4,32 @@ import 'package:corona/widgets/my_header.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:geocoding/geocoding.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import '../constant.dart';
 
 class DetailsScreen extends StatelessWidget {
+  final LatLng? lt;
   final double offset = 0;
   TextEditingController _controller = TextEditingController();
+
+  DetailsScreen({Key? key, this.lt}) : super(key: key);
+
+
+
 
   @override
   Widget build(BuildContext context) {
     final cubit = BlocProvider.of<DetailsCubit>(context);
-    var country = cubit.countries[0];
+    // var country = cubit.countries[0];
+    cubit.lt = lt!;
+    var placmarks ;
+    cubit.getLocation().then((value) => placmarks=value);
+
+    var country = placmarks[0].country ?? cubit.countries[0];
+
+
     return Scaffold(
         body: SingleChildScrollView(
       child: Column(
@@ -43,11 +58,16 @@ class DetailsScreen extends StatelessWidget {
                 SizedBox(width: 20),
                 Expanded(
                   child:  BlocBuilder<DetailsCubit, DetailsState>(builder: (context, state) {
+
+
+                    // var country = cubit.placeMarks![0].country ??"Egypt";
+
+
                     return   DropdownButton(
                       isExpanded: true,
                       underline: SizedBox(),
                       icon: SvgPicture.asset("assets/icons/dropdown.svg"),
-                      value: country,
+                      value:country,
                       items: cubit.countries
                           .map<DropdownMenuItem<String>>((String value) {
                         return DropdownMenuItem<String>(
