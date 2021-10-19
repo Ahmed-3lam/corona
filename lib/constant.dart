@@ -27,8 +27,9 @@ const kTitleTextstyle = TextStyle(
 );
 
 //Url
-const coronaBaseURL = "https://coronavirus-tracker-api.herokuapp.com/v2/";
-const coronaLocationsURL = "locations";
+const coronaBaseURL = "https://";
+const coronaLocationsURL = "coronavirus-tracker-api.herokuapp.com/v2/locations";
+const covidAllCountriesApi ="covid19.mathdro.id/api/deaths";
  const Map<String,String > countriesCODE= {
 "Ascension Island":'ac',
 "Andorra":'ad',

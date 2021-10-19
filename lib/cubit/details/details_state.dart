@@ -13,4 +13,5 @@ class DetailsErrorState extends DetailsState {
 
    DetailsErrorState(this.err);
 }
-class DetailscatchMapState extends DetailsState {}
+class DetailsLoadingFromMapState extends DetailsState {}
+class DetailsLoadedFromMapState extends DetailsState {}

@@ -20,9 +20,21 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
+    return  MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Covid 19',
+      theme: ThemeData(
+          scaffoldBackgroundColor: kBackgroundColor,
+          fontFamily: "Poppins",
+          textTheme: TextTheme(
+            bodyText1: TextStyle(color: kBodyTextColor),
+          )),
+      home: MapScreen(),
+    );
+
+      MultiBlocProvider(
         providers: [
-        BlocProvider(create: (context) => DetailsCubit()..getCoronaData()..getLocation()),
+        // BlocProvider(create: (context) => DetailsCubit()..getCoronaData()),
     ],
     child:
 
