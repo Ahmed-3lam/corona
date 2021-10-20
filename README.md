@@ -26,7 +26,8 @@ https://user-images.githubusercontent.com/85360095/138164515-13d441ed-8ecc-48a9-
 - Using Circles on the map 
 - Using Google Map Api
 ## Get Data from https://coronavirus-tracker-api.herokuapp.com/v2/locations:
-- and made a map if countries code to get the data by code and showing its counrty
+- using a map of countries code to get the data by code and showing its counrty
+- using map instead of list increase the performance 
 - used the Lat. and Longt. with the infection data to draw a red circle of the most infected countries
 
 - used const in constants variablesand other methods to increase performance
