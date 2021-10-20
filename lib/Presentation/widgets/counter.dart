@@ -1,7 +1,8 @@
 
 import 'package:flutter/material.dart';
 
-import '../constant.dart';
+import '../../constant.dart';
+
 
 class Counter extends StatelessWidget {
   final int? number;

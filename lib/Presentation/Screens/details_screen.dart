@@ -1,13 +1,15 @@
-import 'package:corona/cubit/details/details_cubit.dart';
-import 'package:corona/widgets/counter.dart';
-import 'package:corona/widgets/my_header.dart';
+import 'package:corona/Presentation/cubit/details/details_cubit.dart';
+import 'package:corona/Presentation/widgets/counter.dart';
+import 'package:corona/Presentation/widgets/my_header.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-import '../constant.dart';
+import '../../constant.dart';
+
 
 class DetailsScreen extends StatelessWidget {
   final LatLng? lt;
