@@ -18,8 +18,17 @@ https://user-images.githubusercontent.com/85360095/138164515-13d441ed-8ecc-48a9-
 
 
 
-## Clean Architicture
-## State Managment ( Bloc - Cubit )
-## Using Google map
-## Using Circles on the map 
-## Get Data from https://coronavirus-tracker-api.herokuapp.com/v2/locations
+## Clean Architicture:
+- Presentation & Data
+- State Managment ( Bloc - Cubit )
+
+## Using Google map:
+- Using Circles on the map 
+- Using Google Map Api
+## Get Data from https://coronavirus-tracker-api.herokuapp.com/v2/locations:
+- and made a map if countries code to get the data by code and showing its counrty
+- used the Lat. and Longt. with the infection data to draw a red circle of the most infected countries
+
+- used const in constants variablesand other methods to increase performance
+- didn't used future builder to catch data because of its bad performance
+
