@@ -10,7 +10,7 @@ Covid 19 Tracker
 - Creating a map of the world
 - Showing red points of infections on the map
 - clicking on the country and showing it's details
-- put all the data required on the details screen
+- puting all the data required on the details screen
 
 
 
@@ -18,18 +18,18 @@ https://user-images.githubusercontent.com/85360095/138164515-13d441ed-8ecc-48a9-
 
 
 
-## Clean Architicture:
+## Clean Architecture:
 - Presentation & Data
 - State Managment ( Bloc - Cubit )
 
 ## Using Google map:
 - Using Circles on the map 
 - Using Google Map Api
-## Get Data from https://coronavirus-tracker-api.herokuapp.com/v2/locations:
-- using a map of countries code to get the data by code and showing its counrty
-- using map instead of list increase the performance 
-- used the Lat. and Longt. with the infection data to draw a red circle of the most infected countries
+## Getting Data from https://coronavirus-tracker-api.herokuapp.com/v2/locations:
+- using a (map) of countries code to get the data by code and showing its counrty
+- using (map) instead of (list) to increase the performance 
+- using the Lat. and Longt. with the infection data to draw a red circle of the most infected countries
 
-- used const in constants variablesand other methods to increase performance
-- didn't used future builder to catch data because of its bad performance
+- using (const) in constants variables and other widgets to increase performance
+- didn't use future builder to catch data because of its bad performance
 
